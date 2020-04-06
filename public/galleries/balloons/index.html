@@ -1,16 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-72227177-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-72227177-1');
-		</script>
-		<!-- End Google Analytics -->
 		<title>Bertrand Bellenot - Balloons...</title>
 		<link rel="canonical" href="https://bellenot.github.io/public/galleries/balloons/index.html" />
 		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
@@ -82,51 +72,6 @@
 			woopra.track();
 		</script>
 		<!-- End of Woopra Code -->
-		<!-- Start of Google structured data -->
-		<script type="application/ld+json">
-			{
-			  "@context": "http://schema.org",
-			  "@type": "Person",
-			  "name": "Bertrand Bellenot",
-			  "url": "https://bellenot.github.io/public/galleries/balloons/index.html",
-			  "sameAs": [
-				"https://www.facebook.com/bertrand.bellenot",
-				"https://plus.google.com/101231948862261619141"
-			  ]
-			}
-		</script>
-		<script type="application/ld+json">
-			{
-			  "@context": "http://schema.org",
-			  "@type": "BreadcrumbList",
-			  "itemListElement": [{
-				"@type": "ListItem",
-				"position": 1,
-				"item": {
-				  "@id": "https://bellenot.github.io/index.html",
-				  "name": "Bertrand Bellenot",
-				  "image": "https://bellenot.github.io/images/ms-icon-310x310.png"
-				}
-			  },{
-				"@type": "ListItem",
-				"position": 2,
-				"item": {
-				  "@id": "https://bellenot.github.io/public/galleries/activities/index.html",
-				  "name": "Personal Activities",
-				  "image": "https://bellenot.github.io/images/activities.jpg"
-				}
-			  },{
-				"@type": "ListItem",
-				"position": 3,
-				"item": {
-				  "@id": "https://bellenot.github.io/public/galleries/balloons/index.html",
-				  "name": "Balloons",
-				  "image": "https://bellenot.github.io/images/balloons.jpg"
-				}
-			  }]
-			}
-		</script>
-		<!-- End of Google structured data -->
 		<script>
 			/**
 			 * This function will log custom App Event
@@ -136,7 +81,6 @@
 			*/
 			function logCustomEvent(_action, _type, _value) {
 				woopra.track('custom', { action: _action, type: _type, value: _value });
-				ga('send', { hitType: 'event', eventCategory: _type, eventAction: _action, eventLabel: _value });
 			}
 		</script>
 	</head>
@@ -198,9 +142,6 @@
 					<li><a href="mailto:bertrand.bellenot@gmail.com?Subject=feedback%20from%20the%20balloon%20gallery" onclick="logCustomEvent('click', 'social', 'Email');" target="_top" class="icon fa-envelope-o">
 						<span class="label">Send Mail</span>
 					</a></li>
-					<li><a href="https://plus.google.com/101231948862261619141" onclick="logCustomEvent('click', 'social', 'Google+');" target="_blank" class="icon fa-google-plus">
-						<span class="label">Google+</span>
-					</a></li>
 					<li><a href="https://www.facebook.com/bertrand.bellenot" onclick="logCustomEvent('click', 'social', 'Facebook');" target="_blank" class="icon fa-facebook">
 						<span class="label">Facebook</span>
 					</a></li>
@@ -240,19 +181,6 @@
 			});
 		</script>
 
-		<!--script type="text/javascript" src="//cdn.jsdelivr.net/cookie-bar/1/cookiebar-latest.min.js?tracking=1&top=1"></script-->
-		<!-- Piwik --> 
-		<script type="text/javascript"> 
-			var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.web.cern.ch/" : "http://piwik.web.cern.ch/"); 
-			document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E")); 
-			</script><script type="text/javascript"> 
-			try { 
-				var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2519); 
-				piwikTracker.trackPageView(); 
-				piwikTracker.enableLinkTracking(); 
-			} catch( err ) {} 
-		</script><noscript><p><img src="http://piwik.web.cern.ch/piwik.php?idsite=2519" style="border:0" alt="" /></p></noscript> 
-		<!-- End Piwik Tracking Code -->
 	</body>
 </html>
 
