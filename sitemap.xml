@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bellenot.github.io/index.html</loc>
+    <lastmod>2020-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://bellenot.github.io/public/galleries/activities/index.html</loc>
+    <lastmod>2020-04-06</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://bellenot.github.io/public/galleries/balloons/index.html</loc>
+    <lastmod>2020-04-06</lastmod>
+    <changefreq>daily</changefreq>
+  </url>
+</urlset>
+<!--<guid value="3237d3fa-878b-4310-92ed-0bd37a0e7467" />-->
