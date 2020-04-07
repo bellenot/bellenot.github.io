@@ -1,4 +1,4 @@
-# My new personal Web site prototype
+# My new personal Web site
 
 A working version of this Web site can be seen here:
 
