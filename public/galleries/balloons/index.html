@@ -67,7 +67,6 @@
 			 * @param {string} _value
 			*/
 			function logCustomEvent(_action, _type, _value) {
-				clicky.log( '#' + _value, _value, _action );
 			}
 		</script>
 		<!-- Begin Clicky tracking code -->
@@ -91,28 +90,28 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="links">
-				<li><a href="https://bellenot.github.io/index.html">home</a></li>
-				<li><a href="https://www.ballon-service.com/" onclick="logCustomEvent('click', 'link', 'Ballon-Service');" target="_blank">Ballon-Service</a></li>
-				<li><a href="http://ballon-muller.ch/prestashop/" onclick="logCustomEvent('click', 'link', 'Ballon-Müller');" target="_blank">Ballon-Müller</a></li>
-				<li><a href="http://ballonversand.ch/" onclick="logCustomEvent('click', 'link', 'ballonversand');" target="_blank">ballonversand</a></li>
+				<li><a class="clicky_log" href="https://bellenot.github.io/index.html">home</a></li>
+				<li><a class="clicky_log" href="https://www.ballon-service.com/" onclick="logCustomEvent('click', 'link', 'Ballon-Service');" target="_blank">Ballon-Service</a></li>
+				<li><a class="clicky_log" href="http://ballon-muller.ch/prestashop/" onclick="logCustomEvent('click', 'link', 'Ballon-Müller');" target="_blank">Ballon-Müller</a></li>
+				<li><a class="clicky_log" href="http://ballonversand.ch/" onclick="logCustomEvent('click', 'link', 'ballonversand');" target="_blank">ballonversand</a></li>
 			</ul>
 		</nav>
 
 		<section id="five" class="wrapper style3 special">
 			<h4><br/></h4>
-			<img style="max-width:95%; max-height:95%; margin:5px; padding:5px;" src="./I%20love%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'I love balloons...');"
+			<img class="clicky_log" style="max-width:95%; max-height:95%; margin:5px; padding:5px;" src="./I%20love%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'I love balloons...');"
 				oncontextmenu="logCustomEvent('right click', 'image', 'I love balloons...');" alt="I love balloons..." title="I love balloons...">
 			<br/>
-			<img style="max-width:95%; max-height:95%; margin:5px; padding:5px;" src="./I%20like%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'I love balloons...');"
+			<img class="clicky_log" style="max-width:95%; max-height:95%; margin:5px; padding:5px;" src="./I%20like%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'I love balloons...');"
 				oncontextmenu="logCustomEvent('right click', 'image', 'I love balloons...');" alt="I love balloons..." title="I love balloons...">
 			<br/>
-			<img style="max-width:95%; max-height:95%; margin:5px; padding:5px;" src="./donut%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'donut balloons...');"
+			<img class="clicky_log" style="max-width:95%; max-height:95%; margin:5px; padding:5px;" src="./donut%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'donut balloons...');"
 				oncontextmenu="logCustomEvent('right click', 'image', 'donut balloons...');" alt="donut balloons..." title="donut balloons...">
 			<br/>
-			<img style="max-width:95%; max-height:100%; margin:5px; padding:5px;" src="./peace%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'peace balloons...');"
+			<img class="clicky_log" style="max-width:95%; max-height:100%; margin:5px; padding:5px;" src="./peace%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'peace balloons...');"
 				oncontextmenu="logCustomEvent('right click', 'image', 'peace balloons...');" alt="peace balloons..." title="peace balloons...">
 			<br/>
-			<img style="max-width:95%; max-height:100%; margin:5px; padding:5px;" src="./united%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'united balloons...');"
+			<img class="clicky_log" style="max-width:95%; max-height:100%; margin:5px; padding:5px;" src="./united%20balloons.jpg" onclick="logCustomEvent('click', 'image', 'united balloons...');"
 				oncontextmenu="logCustomEvent('right click', 'image', 'united balloons...');" alt="united balloons..." title="united balloons...">
 			<br/>
 		</section>
