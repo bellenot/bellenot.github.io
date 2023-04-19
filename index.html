@@ -110,25 +110,25 @@
 					<p></p>
 				</header></center>
 				<article class="feature left">
-					<span class="image"><a href="https://root.cern.ch/" onclick="logCustomEvent('click', 'link', 'ROOT');" target="_blank"><img src="images/logo_full-plus-text-hor2.png" alt="" /></a></span>
+					<span class="image"><a href="https://root.cern.ch/" target="_blank"><img src="images/logo_full-plus-text-hor2.png" alt="" /></a></span>
 					<div class="content">
 						<h2>The ROOT Project</h2>
 						<p>ROOT is a framework for data processing, born at CERN, at the heart of the research on high-energy physics. Every day, thousands of physicists use ROOT applications to analyze their data or to perform simulations</p>
 						<ul class="actions">
 							<li>
-								<a href="https://root.cern.ch/" onclick="logCustomEvent('click', 'link', 'ROOT');" target="_blank" class="button alt">More</a>
+								<a href="https://root.cern.ch/" target="_blank" class="button alt">More</a>
 							</li>
 						</ul>
 					</div>
 				</article>
 				<article class="feature right">
-					<span class="image"><a href="https://root.cern.ch/js/" onclick="logCustomEvent('click', 'link', 'JSROOT');" target="_blank"><img src="images/JSROOT2_s.jpg" alt="" /></a></span>
+					<span class="image"><a href="https://root.cern.ch/js/" target="_blank"><img src="images/JSROOT2_s.jpg" alt="" /></a></span>
 					<div class="content">
 						<h2>JavaScript ROOT</h2>
 						<p>JavaScript ROOT aims to provide interactive ROOT-like graphics in web browsers. One could read and display data from binary ROOT files. Or data can be obtained from JSON representation, produced with TBufferJSON class.</p>
 						<ul class="actions">
 							<li>
-								<a href="https://root.cern.ch/js/" onclick="logCustomEvent('click', 'link', 'JSROOT');" target="_blank" class="button alt">More</a>
+								<a href="https://root.cern.ch/js/" target="_blank" class="button alt">More</a>
 							</li>
 						</ul>
 					</div>
@@ -157,22 +157,22 @@
 					</div>
 				</article>
 				<article class="feature right">
-					<a href="#" onclick="logCustomEvent('click', 'galleries', 'freakshow - balloons'); return false;" class="image"><img src="images/freakshow-balloons.jpg" alt="Freakshow Balloons"></a>
+					<a href="#" onclick="return false;" class="image"><img src="images/freakshow-balloons.jpg" alt="Freakshow Balloons"></a>
 					<map name="hiddenmap">
-						<area shape="circle" coords="135,50,40" alt="balloon gallery" href="https://bellenot.github.io/galleries/balloons/index.html" onclick="logCustomEvent('click', 'galleries', 'freakshow - balloons hidden map');">
-						<area shape="circle" coords="80,125,40" alt="balloon gallery" href="https://bellenot.github.io/galleries/balloons/index.html" onclick="logCustomEvent('click', 'galleries', 'freakshow - balloons hidden map');">
-						<area shape="circle" coords="185,125,40" alt="balloon gallery" href="https://bellenot.github.io/galleries/balloons/index.html" onclick="logCustomEvent('click', 'galleries', 'freakshow - balloons hidden map');">
+						<area shape="circle" coords="135,50,40" alt="balloon gallery" href="https://bellenot.github.io/galleries/balloons/index.html">
+						<area shape="circle" coords="80,125,40" alt="balloon gallery" href="https://bellenot.github.io/galleries/balloons/index.html">
+						<area shape="circle" coords="185,125,40" alt="balloon gallery" href="https://bellenot.github.io/galleries/balloons/index.html">
 					</map>
 					<div class="content">
 						<h2>Miscellaneous</h2>
 						<p>Some more personal stuff here... (please ask for access)
 						<span style="visibility: hidden">
-							See also my <a href="https://bellenot.github.io/galleries/balloons/index.html" onclick="logCustomEvent('click', 'galleries', 'freakshow - balloons hidden link');">balloon page</a>
+							See also my <a href="https://bellenot.github.io/galleries/balloons/index.html" >balloon page</a>
 						</span>
 						</p>
 						<ul class="actions">
 							<li>
-								<a href="#" onclick="logCustomEvent('click', 'galleries', 'freakshow - balloons'); return false;" class="button alt">More</a>
+								<a href="#" onclick="return false;" class="button alt">More</a>
 							</li>
 						</ul>
 					</div>
@@ -232,10 +232,10 @@
 					<h1>Get in touch</h1>
 				</header>
 				<ul class="icons">
-					<li><a href="mailto:bertrand.bellenot@cern.ch?Subject=feedback%20from%20the%20home%20page" onclick="logCustomEvent('click', 'social', 'Email');" target="_top" class="icon fa-envelope-o">
+					<li><a href="mailto:bertrand.bellenot@cern.ch?Subject=feedback%20from%20the%20home%20page" target="_top" class="icon fa-envelope-o">
 						<span class="label">Send Mail</span>
 					</a></li>
-					<li><a href="https://www.facebook.com/bertrand.bellenot" onclick="logCustomEvent('click', 'social', 'Facebook');" target="_blank" class="icon fa-facebook">
+					<li><a href="https://www.facebook.com/bertrand.bellenot" target="_blank" class="icon fa-facebook">
 						<span class="label">Facebook</span>
 					</a></li>
 				</ul>
@@ -259,23 +259,6 @@
 		<script type="text/javascript" src="assets/js/jquery.cookiebar.js"></script>
 
 		<script src="//connect.facebook.net/en_US/all.js#xfbml=1"></script>
-		<script>
-			FB.Event.subscribe('edge.create', function(href, widget) {
-				logCustomEvent('click', 'social', 'Facebook Like (home page)');
-			});
-			FB.Event.subscribe('edge.remove', function(href, widget) {
-				logCustomEvent('click', 'social', 'Facebook Unlike (home page)');
-			});
-			FB.Event.subscribe('comment.create', function(response) {
-				logCustomEvent('create comment', 'social', response.message);
-			});
-		</script>
-
-		<script type="text/javascript">
-			function fb_share_callback(gpovote) {
-				logCustomEvent('click', 'social', 'Facebook Share (home page)');
-			}
-		</script>
 
 		<script type="text/javascript">
 			$(document).ready(function() {
