@@ -39,6 +39,11 @@
 		<link rel="shortcut icon" href="https://bellenot.github.io/images/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="https://bellenot.github.io/images/favicon.ico" type="image/x-icon">
 		<!--link rel="shortcut icon" href="https://bellenot.github.io/images/favicon.ico" type="image/vnd.microsoft.icon" /-->
+		<script type="text/javascript" language="javascript"> $(function () { $(this).bind("contextmenu", function (e) { e.preventDefault(); }); }); </script>
+		<script type="text/javascript" language="javascript"> $(function () { $(window).bind("keydown", function (e) {
+				if ((e.which == 123) || ((e.ctrlKey || e.metaKey) && (e.which == 73 || e.which == 83 || e.which == 85))) { e.preventDefault(); return false; }
+			}); });
+		</script>
 
 		<!-- Start of Facebook sharing information -->
 		<meta property="fb:admins" content="bertrand.bellenot" />
