@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function readTextFile(file) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.open("GET", "./data/cosmic_2020-07-17_15-13-50__3000.txt", false);
+      rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4) {
+          if (rawFile.status === 200 || rawFile.status == 0) {
+            var allText = rawFile.responseText;
+            document.querySelector("textarea").value = allText;
+          }
+        }
+      }
+      rawFile.send(null);
+    }
+    setInterval(readTextFile, 1000);
+  </script>
+</head>
+<body>
+
+<p style="font-family:verdana;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;Cosmic DAQ Live Raw Data</p>
+
+<textarea id="w3review" name="w3review" rows="10" cols="50"></textarea>
+<br><br>
+
+</body>
+</html>

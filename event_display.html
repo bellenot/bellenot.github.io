@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <title>Very Basic ALICE Event Display</title>
+   <link rel="shortcut icon" href="favicon.ico"/>
+   <style>
+      #custom_buttons {
+         position: absolute;
+         left: 10px;
+         top: 10px;
+      }
+
+      * {
+         box-sizing: border-box;
+      }
+      #grid {
+         overflow: hidden;
+         position: absolute;
+         left: 0px;
+         top: 0px;
+          right: 0px;
+         bottom: 0px;
+      }
+      .block {
+         min-width: 100px;
+         min-height: 100px;
+         border: solid 1px darkgrey;
+         float: left;
+         margin: 2px;
+      }
+      .block.big {
+         width: calc(66% - 4px);
+         height: calc(100% - 4px);
+      }
+      .block.small {
+         width: calc(33% - 4px);
+         height: calc(50% - 4px);
+      }
+   </style>
+</head>
+
+<body>
+   <div class="grid">
+      <div id="grid">
+         <div class="block big" id="main"></div>
+         <div class="block small" id="projz"></div>
+         <div class="block small" id="projx"></div>
+      </div>
+   </div>
+   <div id="custom_buttons">
+      <input id="btn_prev" type="button" title="Get previous event" value="Prev"/>
+      <input id="btn_get" type="button" title="Get first event" value="First"/>
+      <input id="btn_next" type="button" title="Get next event" value="Next"/>
+   </div>
+</body>
+
+   <script type='module'>
+      import { httpRequest, draw, openFile } from 'https://root.cern/js/latest/modules/main.mjs';
+      let idx = 0
+      let events = [
+		  "./events/event_001.root",
+		  "./events/event_002.root",
+		  "./events/event_003.root",
+		  "./events/event_004.root",
+		  "./events/event_005.root",
+		  "./events/event_006.root",
+        "./events/pp_900_01.root",
+        "./events/pp_900_02.root",
+        "./events/pp_900_05.root",
+        "./events/pp_900_08.root",
+        "./events/pp_1400_04.root",
+        "./events/pp_1400_06.root",
+        "./events/pp_1400_15.root",
+        "./events/pp_1400_17.root",
+        "./events/heavy_1k.root"
+      ];
+      let obj = await httpRequest("./files/simple_alice.json", 'object');
+      let main_painter = await draw("main", obj, "dray");
+      let projz_painter = await draw("projz", obj, "projz");
+      let projx_painter = await draw("projx", obj, "projx");
+
+      async function getEvent(idx) {
+         main_painter.clearExtras();
+         projz_painter.clearExtras();
+         projx_painter.clearExtras();
+         let file = await openFile(events[idx]);
+         let hits = await file.readObject('hits;1');
+         for (var i=0; i<hits.arr.length; ++i) {
+            hits.arr[i].fMarkerSize = 0.75;
+            hits.arr[i].fMarkerStyle = 8;
+         }
+         let tracks = await file.readObject("tracks;1");
+         //for (var i=0; i<tracks.arr.length; ++i) {
+         //   tracks.arr[i].fLineWidth = 2;
+         //}
+         main_painter.drawExtras(hits, 'hits');
+         projz_painter.drawExtras(hits, 'hits');
+         projx_painter.drawExtras(hits, 'hits');
+         main_painter.drawExtras(tracks, 'tracks');
+         projz_painter.drawExtras(tracks, 'tracks');
+         projx_painter.drawExtras(tracks, 'tracks');
+         main_painter.render3D();
+         projz_painter.render3D();
+         projx_painter.render3D();
+      }
+
+      document.getElementById('btn_prev').onclick = function() {
+         idx = (idx <= 0) ? 13 : idx - 1;
+         getEvent(idx);
+      }
+
+      document.getElementById('btn_get').onclick = function() {
+         idx = 0;
+         getEvent(idx);
+      }
+
+      document.getElementById('btn_next').onclick = function() {
+         idx = (idx >= 13) ? 0 : idx + 1;
+         getEvent(idx);
+      }
+
+   </script>
+
+</html>

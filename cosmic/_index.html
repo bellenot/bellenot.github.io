@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <title>Cosmic Data Spectrum</title>
+
+   <script type='text/javascript'>
+      window.setInterval(function(){
+         // absolute file path can be used as well
+         var filename = "cosmic.root";
+         JSROOT.OpenFile(filename, function(file) {
+            file.ReadObject("cosmic", function(obj) {
+               JSROOT.redraw("drawing", obj);
+            });
+         });
+      }, 30000);
+   </script>
+
+   <script type="text/javascript" src="https://root.cern.ch/js/latest/scripts/JSRootCore.js"></script>
+
+   <script type='text/javascript'>
+     // absolute file path can be used as well
+     var filename = "cosmic.root";
+     JSROOT.OpenFile(filename, function(file) {
+        file.ReadObject("cosmic", function(obj) {
+           JSROOT.draw("drawing", obj);
+        });
+     });
+   </script>
+</head>
+
+<body>
+  <style type="text/css">
+    body, html {
+      width: 97%;
+      height: 97%;
+    }
+  </style>
+  <div id="drawing" style="width:100%; height:100%"></div>
+</body>
+
+</html>
+

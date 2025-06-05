@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <title>Cosmic Data Spectrum</title>
+
+   <script type="text/javascript" src="https://root.cern.ch/js/dev/scripts/JSRoot.core.js" crossorigin="anonymous"></script>
+
+   <script type='text/javascript'>
+      async function draw_canvas(first) {
+         // absolute file path can be used as well
+         let file = await JSROOT.openFile("./cosmic.root");
+         let canvas = await file.readObject("cosmic");
+         if (first)
+            await JSROOT.draw("drawing", canvas);
+         else
+            await JSROOT.redraw("drawing", canvas);
+      }
+      draw_canvas(true);
+      window.setInterval(() => draw_canvas(false), 30000);
+   </script>
+</head>
+
+<body>
+  <style type="text/css">
+    body, html {
+      width: 97%;
+      height: 97%;
+    }
+  </style>
+  <div id="drawing" style="width:100%; height:100%"></div>
+</body>
+
+</html>
+
