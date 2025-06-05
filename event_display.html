@@ -75,7 +75,7 @@
         "./events/pp_1400_17.root",
         "./events/heavy_1k.root"
       ];
-      let obj = await httpRequest("./files/simple_alice.json", 'object');
+      let obj = await httpRequest("./events/simple_alice.json", 'object');
       let main_painter = await draw("main", obj, "dray");
       let projz_painter = await draw("projz", obj, "projz");
       let projx_painter = await draw("projx", obj, "projx");
